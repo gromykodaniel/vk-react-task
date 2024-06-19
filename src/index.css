@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Montserrat", sans-serif;
+  scrollbar-width: thin;
+}
+
+@layer utilities {
+  .flexCenter {
+    @apply flex items-center justify-center;
+  }
+
+  .pagination {
+    @apply sticky top-0 mt-2 z-10 bg-[#004696] flex justify-center text-center text-white flex-col;
+  }
+
+  .pagination ul {
+    @apply list-none flex justify-center flex-wrap;
+  }
+
+  .pagination li {
+    @apply mr-2 cursor-pointer;
+  }
+
+  .pagination p {
+    @apply text-white hover:text-blue-400 transition duration-300 ease-in-out;
+  }
+
+  .pagination p.active {
+    @apply text-blue-400;
+  }
+
+  .pagination .previous {
+    @apply mr-2;
+  }
+
+  .pagination .next {
+    @apply ml-2;
+  }
+
+  .pagination .previous,
+  .pagination .next {
+    @apply text-white  transition duration-300 ease-in-out;
+  }
+
+  .pagination .previous.active,
+  .pagination .next.active {
+    @apply text-blue-400;
+  }
+
+  .pagination .previous:hover,
+  .pagination .next:hover {
+    @apply text-blue-400;
+  }
+}
